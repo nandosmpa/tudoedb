@@ -4,6 +4,10 @@ public class Produto {
     private int quantidade;
 
     public void vender(quantidade) {}
+
     public void reporEstoque(quantidade) {}
-    public void consultarEstoque() { return 0; }
+
+    public void consultarEstoque() {
+        return 0;
+    }
 }

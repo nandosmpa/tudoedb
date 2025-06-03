@@ -4,6 +4,11 @@ public class Aluno {
     private double notas;
 
     public void adicionarNota(notas) {}
-    public void calcularMedia() {}
-    public void verificarAprovacao() { return 0; }
+
+    public void calcularMedia() {
+    }
+
+    public void verificarAprovacao() {
+        return 0;
+    }
 }
