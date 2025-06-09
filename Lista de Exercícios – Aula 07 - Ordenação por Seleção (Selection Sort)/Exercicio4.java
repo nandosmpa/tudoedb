@@ -1,23 +1,23 @@
-//  Crie um programa que leia 8 números do usuário, armazene em um vetor e ordene com selection sort.
+// Modifique o algoritmo para ordenar em ordem decrescente.
 
 import java.util.Scanner;
 
-public class Exercicio3 {
+public class Exercicio4 {
     public static void selectionSort(int[] arr) {
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
-            int indiceMenor = i;
+            int indiceMaior = i;
 
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[indiceMenor]) {
-                    indiceMenor = j;
+                if (arr[j] > arr[indiceMaior]) {
+                    indiceMaior = j;
                 }
             }
 
             int temp = arr[i];
-            arr[i] = arr[indiceMenor];
-            arr[indiceMenor] = temp;
+            arr[i] = arr[indiceMaior];
+            arr[indiceMaior] = temp;
         }
     }
 
