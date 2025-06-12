@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        String[] v = {"Fernando", "Ian", "Weskley", "Claudia", "Samuca"};
+        for (int i = 1; i < v.length; i++) {
+            String n = v[i];
+            int j = i - 1;
+            while (j >= 0 && v[j].compareTo(n) > 0) {
+                v[j + 1] = v[j];
+                j--;
+            }
+            v[j + 1] = n;
+        }
+        System.out.println("Nomes ordenados:");
+        imprimirVetor(v);
+    }
+    static void imprimirVetor(String[] v) {
+        for (String s : v) System.out.printf("%s ", s);
+        System.out.println();
+    }
+}
