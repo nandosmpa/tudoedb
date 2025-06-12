@@ -1,0 +1,24 @@
+O que está sendo pedido:
+Criar uma tabela comparando os 3 algoritmos quanto a:
+
+Estabilidade,
+
+Complexidade (melhor, médio, pior),
+
+Uso recomendado,
+
+Eficiência prática.
+
+Tabela explicativa:
+public class Questao10 {
+
+    public static void main(String[] args) {
+        System.out.println("╔══════════════════╦══════════╦══════════════════════════╦════════════════════════════════════════╗");
+        System.out.println("║ Algoritmo        ║ Estável  ║ Complexidade (Mel/Méd/Pior) ║ Uso Recomendado                       ║");
+        System.out.println("╠══════════════════╬══════════╬══════════════════════════╬════════════════════════════════════════╣");
+        System.out.println("║ Bubble Sort      ║ Sim      ║ O(n) / O(n²) / O(n²)      ║ Ensino, vetores muito pequenos        ║");
+        System.out.println("║ Insertion Sort   ║ Sim      ║ O(n) / O(n²) / O(n²)      ║ Pequenos vetores, quase ordenados     ║");
+        System.out.println("║ Selection Sort   ║ Não      ║ O(n²) / O(n²) / O(n²)     ║ Fácil implementação, poucos elementos ║");
+        System.out.println("╚══════════════════╩══════════╩══════════════════════════╩════════════════════════════════════════╝");
+    }
+}
