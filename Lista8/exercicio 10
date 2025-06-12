@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int[] v = {7, 12, 25, 31, 39, 48, 54, 66};
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int i = 0, f = v.length - 1;
+        boolean achou = false;
+        while (i <= f) {
+            int m = (i + f) / 2;
+            if (v[m] == x) {
+                achou = true;
+                break;
+            } else if (x > v[m]) i = m + 1;
+            else f = m - 1;
+        }
+        if (achou) System.out.println("Valor encontrado");
+        else System.out.println("Valor não encontrado");
+        sc.close();
+    }
+}
