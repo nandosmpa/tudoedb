@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] v = new String[5];
+        for (int i = 0; i < v.length; i++) {
+            v[i] = sc.nextLine();
+        }
+        for (int i = 1; i < v.length; i++) {
+            String n = v[i];
+            int j = i - 1;
+            while (j >= 0 && v[j].compareTo(n) > 0) {
+                v[j + 1] = v[j];
+                j--;
+            }
+            v[j + 1] = n;
+        }
+        System.out.println("Nomes digitados ordenados:");
+        imprimirVetor(v);
+        sc.close();
+    }
+    static void imprimirVetor(String[] v) {
+        for (String s : v) System.out.printf("%s ", s);
+        System.out.println();
+    }
+}
