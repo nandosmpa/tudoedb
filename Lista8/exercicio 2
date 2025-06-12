@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] v = {45, 9, 67, 23, 38, 80, 12, 51, 33, 6};
+        for (int i = 1; i < v.length; i++) {
+            int n = v[i];
+            int j = i - 1;
+            while (j >= 0 && v[j] > n) {
+                v[j + 1] = v[j];
+                j--;
+            }
+            v[j + 1] = n;
+            System.out.println("Após inserção " + i + ":");
+            imprimirVetor(v);
+        }
+    }
+    static void imprimirVetor(int[] v) {
+        for (int i : v) System.out.printf("%d ", i);
+        System.out.println();
+    }
+}
