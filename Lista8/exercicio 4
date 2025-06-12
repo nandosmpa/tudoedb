@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] v = {22, 90, 15, 7, 66, 41, 13, 80};
+        for (int i = 1; i < v.length; i++) {
+            int n = v[i];
+            int j = i - 1;
+            while (j >= 0 && v[j] < n) {
+                v[j + 1] = v[j];
+                j--;
+            }
+            v[j + 1] = n;
+        }
+        System.out.println("Vetor ordenado em ordem decrescente:");
+        imprimirVetor(v);
+    }
+    static void imprimirVetor(int[] v) {
+        for (int i : v) System.out.printf("%d ", i);
+        System.out.println();
+    }
+}
