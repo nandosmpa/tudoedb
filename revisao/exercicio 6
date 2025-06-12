@@ -1,0 +1,58 @@
+public class Questao6 {
+
+    static class Produto {
+        String nome;
+        double preco;
+
+        Produto(String nome, double preco) {
+            this.nome = nome;
+            this.preco = preco;
+        }
+
+        @Override
+        public String toString() {
+            return nome + " - R$" + preco;
+        }
+    }
+
+    public static void insertionSortPorNome(Produto[] produtos) {
+        for (int i = 1; i < produtos.length; i++) {
+            Produto chave = produtos[i];
+            int j = i - 1;
+            while (j >= 0 && produtos[j].nome.compareTo(chave.nome) > 0) {
+                produtos[j + 1] = produtos[j];
+                j--;
+            }
+            produtos[j + 1] = chave;
+        }
+    }
+
+    public static void insertionSortPorPreco(Produto[] produtos) {
+        for (int i = 1; i < produtos.length; i++) {
+            Produto chave = produtos[i];
+            int j = i - 1;
+            while (j >= 0 && produtos[j].preco > chave.preco) {
+                produtos[j + 1] = produtos[j];
+                j--;
+            }
+            produtos[j + 1] = chave;
+        }
+    }
+
+    public static void main(String[] args) {
+        Produto[] estoque = {
+            new Produto("Feijão", 7.0),
+            new Produto("Arroz", 5.5),
+            new Produto("Macarrão", 4.2),
+            new Produto("Biscoito", 3.0)
+        };
+
+        System.out.println("Ordenado por nome:");
+        insertionSortPorNome(estoque);
+        for (Produto p : estoque) System.out.println(p);
+
+        System.out.println("\nOrdenado por preço:");
+        insertionSortPorPreco(estoque);
+        for (Produto p : estoque) System.out.println(p);
+    }
+}
