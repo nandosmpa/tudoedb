@@ -1,0 +1,27 @@
+public class Questao8 {
+
+    public static void insertionSort(int[] v) {
+        for (int i = 1; i < v.length; i++) {
+            int chave = v[i];
+            int j = i - 1;
+            while (j >= 0 && v[j] > chave) {
+                v[j + 1] = v[j];
+                j--;
+            }
+            v[j + 1] = chave;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] notas = {6, 7, 8, 9, 10, 5}; // quase ordenado
+
+        System.out.println("Antes:");
+        for (int n : notas) System.out.print(n + " ");
+        System.out.println();
+
+        insertionSort(notas);
+
+        System.out.println("Depois:");
+        for (int n : notas) System.out.print(n + " ");
+    }
+}
