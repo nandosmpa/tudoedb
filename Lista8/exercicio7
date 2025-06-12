@@ -1,0 +1,40 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] insertion = new int[1000];
+        int[] selection = new int[1000];
+
+        for (int i = 0; i < 1000; i++) {
+            int valor = (int)(Math.random() * 100);
+            insertion[i] = valor;
+            selection[i] = valor;
+        }
+
+        long inicio = System.currentTimeMillis();
+        for (int i = 1; i < insertion.length; i++) {
+            int atual = insertion[i];
+            int j = i - 1;
+            while (j >= 0 && insertion[j] > atual) {
+                insertion[j + 1] = insertion[j];
+                j--;
+            }
+            insertion[j + 1] = atual;
+        }
+        long fim = System.currentTimeMillis();
+        System.out.println("Tempo Insertion Sort: " + (fim - inicio) + "ms");
+
+        inicio = System.currentTimeMillis();
+        for (int i = 0; i < selection.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < selection.length; j++) {
+                if (selection[j] < selection[min]) {
+                    min = j;
+                }
+            }
+            int temp = selection[i];
+            selection[i] = selection[min];
+            selection[min] = temp;
+        }
+        fim = System.currentTimeMillis();
+        System.out.println("Tempo Selection Sort: " + (fim - inicio) + "ms");
+    }
+}
