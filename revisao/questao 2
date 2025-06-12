@@ -1,0 +1,84 @@
+public class Questao2 {
+
+    static int comparacoes = 0;
+    static int trocas = 0;
+
+    public static void reset() {
+        comparacoes = 0;
+        trocas = 0;
+    }
+
+    public static void bubbleSort(int[] v) {
+        reset();
+        for (int i = 0; i < v.length - 1; i++) {
+            for (int j = 0; j < v.length - 1 - i; j++) {
+                comparacoes++;
+                if (v[j] > v[j + 1]) {
+                    int temp = v[j];
+                    v[j] = v[j + 1];
+                    v[j + 1] = temp;
+                    trocas++;
+                }
+            }
+        }
+    }
+
+    public static void insertionSort(int[] v) {
+        reset();
+        for (int i = 1; i < v.length; i++) {
+            int chave = v[i];
+            int j = i - 1;
+            comparacoes++;
+            while (j >= 0 && v[j] > chave) {
+                v[j + 1] = v[j];
+                j--;
+                trocas++;
+                if (j >= 0) comparacoes++;
+            }
+            v[j + 1] = chave;
+        }
+    }
+
+    public static void selectionSort(int[] v) {
+        reset();
+        for (int i = 0; i < v.length - 1; i++) {
+            int menor = i;
+            for (int j = i + 1; j < v.length; j++) {
+                comparacoes++;
+                if (v[j] < v[menor]) menor = j;
+            }
+            if (menor != i) {
+                int temp = v[i];
+                v[i] = v[menor];
+                v[menor] = temp;
+                trocas++;
+            }
+        }
+    }
+
+    public static void testar(String descricao, int[] original) {
+        System.out.println("\nCenário: " + descricao);
+
+        int[] a = original.clone();
+        bubbleSort(a);
+        System.out.println("Bubble Sort    -> Comparações: " + comparacoes + ", Trocas: " + trocas);
+
+        int[] b = original.clone();
+        insertionSort(b);
+        System.out.println("Insertion Sort -> Comparações: " + comparacoes + ", Trocas: " + trocas);
+
+        int[] c = original.clone();
+        selectionSort(c);
+        System.out.println("Selection Sort -> Comparações: " + comparacoes + ", Trocas: " + trocas);
+    }
+
+    public static void main(String[] args) {
+        int[] ordenado = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] inverso = {8, 7, 6, 5, 4, 3, 2, 1};
+        int[] aleatorio = {5, 3, 7, 1, 8, 4, 2, 6};
+
+        testar("Vetor já ordenado", ordenado);
+        testar("Vetor em ordem inversa", inverso);
+        testar("Vetor aleatório", aleatorio);
+    }
+}
