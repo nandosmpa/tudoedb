@@ -1,0 +1,38 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] bubble = new int[1000];
+        int[] insertion = new int[1000];
+
+        for (int i = 0; i < 1000; i++) {
+            int n = (int)(Math.random() * 100);
+            bubble[i] = n;
+            insertion[i] = n;
+        }
+
+        long ini = System.currentTimeMillis();
+        for (int i = 0; i < bubble.length - 1; i++) {
+            for (int j = 0; j < bubble.length - i - 1; j++) {
+                if (bubble[j] > bubble[j + 1]) {
+                    int temp = bubble[j];
+                    bubble[j] = bubble[j + 1];
+                    bubble[j + 1] = temp;
+                }
+            }
+        }
+        long fim = System.currentTimeMillis();
+        System.out.println("Tempo para Bubble Sort: " + (fim - ini) + "ms");
+
+        ini = System.currentTimeMillis();
+        for (int i = 1; i < insertion.length; i++) {
+            int key = insertion[i];
+            int j = i - 1;
+            while (j >= 0 && insertion[j] > key) {
+                insertion[j + 1] = insertion[j];
+                j--;
+            }
+            insertion[j + 1] = key;
+        }
+        fim = System.currentTimeMillis();
+        System.out.println("Tempo para Insertion Sort: " + (fim - ini) + "ms");
+    }
+}
