@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] v = {33, 18, 42, 9, 25, 61, 7, 38, 50, 13};
+        for (int i = 0; i < v.length - 1; i++) {
+            for (int j = 0; j < v.length - i - 1; j++) {
+                if (v[j] > v[j + 1]) {
+                    int temp = v[j];
+                    v[j] = v[j + 1];
+                    v[j + 1] = temp;
+                }
+            }
+            System.out.println("Após a passagem " + (i + 1) + ":");
+            imprimirVetor(v);
+        }
+    }
+
+    static void imprimirVetor(int[] v) {
+        for (int i : v) System.out.print(i + " ");
+        System.out.println();
+    }
+}
