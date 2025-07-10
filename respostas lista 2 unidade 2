@@ -1,0 +1,89 @@
+1. a) Duas pilhas
+✔ Justificativa: Uma pilha armazena o histórico para voltar, e outra permite refazer os passos, simulando a navegação de páginas para frente e para trás.
+
+2. a) Remove e retorna o último valor inserido
+✔ Justificativa: O método pop() retira o elemento do topo, que é sempre o último inserido em uma pilha (LIFO).
+
+3. a) Lista circular
+✔ Justificativa: A lista circular permite o revezamento contínuo de tarefas entre colaboradores, pois seu final se conecta ao início.
+
+4. a) A fila se torna inválida e o vetor estoura
+✔ Justificativa: Sem controle de circularidade ou verificação de limites, os índices podem ultrapassar o tamanho do vetor.
+
+5. a) Duas pilhas
+✔ Justificativa: Uma pilha guarda as ações realizadas (para desfazer), e outra as ações desfeitas (para refazer).
+
+6. a) Insere um novo nó no início da lista
+✔ Justificativa: O método coloca o novo nó antes do atual início e atualiza o ponteiro.
+
+7. a) Fila
+✔ Justificativa: O sistema de delivery deve atender clientes por ordem de chegada, comportamento típico de uma fila (FIFO).
+
+8. a) Lista duplamente encadeada
+✔ Justificativa: A presença de ponteiros anterior e proximo caracteriza uma lista duplamente encadeada.
+
+9. a) Lista encadeada com inserção condicional
+✔ Justificativa: A lista deve inserir idosos com prioridade, o que exige lógica condicional na inserção.
+
+10. a) Fila circular com vetor
+✔ Justificativa: O cálculo fim = (fim + 1) % 5 caracteriza um vetor que se comporta como uma fila circular.
+
+11. a) Lista circular encadeada
+✔ Justificativa: O último nó aponta para o primeiro (novo.proximo = inicio), formando um ciclo.
+
+12. a) Lista circular
+✔ Justificativa: O jogo alterna os jogadores indefinidamente, comportamento ideal de uma lista circular.
+
+13. a) Cria uma pilha usando lista ligada
+✔ Justificativa: A estrutura insere e remove sempre no topo, típico de pilhas, usando nós encadeados.
+
+14. a) Duas pilhas
+✔ Justificativa: As ações de desfazer e refazer são modeladas com duas pilhas — uma para cada direção.
+
+15. a) Fila encadeada com inserção no fim e remoção no início
+✔ Justificativa: O método enfileirar adiciona ao final e desenfileirar remove do início.
+
+16. a) Lista duplamente encadeada
+✔ Justificativa: Permite remoção eficiente de qualquer pedido, pois há acesso ao anterior e ao próximo.
+
+17. a) Lista duplamente encadeada
+✔ Justificativa: A presença de anterior e proximo define essa estrutura.
+
+18. a) Fila com prioridade
+✔ Justificativa: Permite que documentos urgentes sejam atendidos antes dos demais, independentemente da ordem de chegada.
+
+19. a) Insere um elemento no final de uma lista simplesmente encadeada
+✔ Justificativa: O método percorre até o fim e insere um novo nó com proximo = null.
+
+20. a) Lista duplamente encadeada
+✔ Justificativa: Permite navegação em qualquer direção na playlist (avançar e retroceder músicas).
+
+21. a) Retorna true se a pilha não possui elementos
+✔ Justificativa: A função verifica se topo == null, ou seja, se a pilha está vazia.
+
+22. a) Pilha
+✔ Justificativa: Verificação de expressões com parênteses exige estrutura LIFO (último a abrir, primeiro a fechar), ideal para pilha.
+
+23. a) Remove o primeiro nó que contém o valor informado
+✔ Justificativa: O laço busca o valor e remove o nó ao ajustar os ponteiros.
+
+24. a) Fila circular com tamanho fixo
+✔ Justificativa: Esse tipo de fila descarta os dados antigos à medida que novos chegam, mantendo o tamanho constante.
+
+25. a) Percorre e imprime todos os valores da lista encadeada
+✔ Justificativa: A função percorre do início até o fim imprimindo os valores com aux = aux.proximo.
+
+26. a) Duas pilhas (uma para desfazer, outra para refazer)
+✔ Justificativa: O histórico de comandos (como em um editor) exige controle de ações anteriores e posteriores.
+
+27. a) Insere elementos de forma ordenada em uma lista encadeada crescente
+✔ Justificativa: O método busca a posição correta para manter a ordem crescente ao inserir.
+
+28. a) Lista duplamente encadeada
+✔ Justificativa: Inserções e remoções eficientes em ambas as extremidades são típicas de listas duplas.
+
+29. a) Retorna verdadeiro se o valor estiver presente na lista
+✔ Justificativa: A função percorre a lista e retorna true ao encontrar o valor.
+
+30. a) Lista duplamente encadeada
+✔ Justificativa: Permite percorrer os registros nos dois sentidos e fazer exclusões em qualquer posição
